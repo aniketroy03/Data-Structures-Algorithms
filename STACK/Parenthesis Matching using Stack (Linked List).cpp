@@ -52,7 +52,7 @@ int isBalanced(char *exp)
 			if(top == NULL)				//if ')' appears but the stack is empty which means there is extra ')' in the expression
 				return 0;			//return false //parenthesis are not balanced
 			else					//if ')' appears and inside the stack '(' is present
-				pop();				//pop the element out from the stack
+				pop();				//pop the element out from the stack that is '(' is popped from the stack
 		}
 		else
 			continue;
