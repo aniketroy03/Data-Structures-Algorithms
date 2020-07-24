@@ -43,23 +43,23 @@ int isBalanced(char *exp)
 {
 	int i;
 	
-	for(i=0; exp[i] != '\0'; i++)
+	for(i=0; exp[i] != '\0'; i++)				//for loop to scan through the entire expression
 	{
-		if(exp[i] == '(')
+		if(exp[i] == '(')				//if '(' appears in the expression push exp[i] ie '(' inside the stack
 			push(exp[i]);
-		else if(exp[i] == ')')
+		else if(exp[i] == ')')				//if ')' appears in the expression 
 		{
-			if(top == NULL)
-				return 0;
-			else
-				pop();
+			if(top == NULL)				//if ')' appears but the stack is empty which means there is extra ')' in the expression
+				return 0;			//return false //parenthesis are not balanced
+			else					//if ')' appears and inside the stack '(' is present
+				pop();				//pop the element out from the stack
 		}
 		else
 			continue;
 	}
-	if(top == NULL)
-		return 1;
-	return 0;
+	if(top == NULL)						//if after complete scan of the expression the stack is empty it means '(' and ')' has balanced each other
+		return 1;					//return true //parenthesis are balanced
+	return 0;						//Else return false //parenthesis are not balanced
 }
 
 int main()
