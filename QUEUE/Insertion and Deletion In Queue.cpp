@@ -43,7 +43,7 @@ int dequeue(struct Queue *q)								//Function to delete element from the queue
 
 void display(struct Queue q)
 {
-	for(int i=q.front+1; i<=q.rear; i++)
+	for(int i=q.front+1; i<=q.rear; i++)							//Since, front points the index just before the first element, i should start from front+1 //rear points exactly to the last element																
 		printf("%d ", q.Q[i]);
 	printf("\n");
 }
