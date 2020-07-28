@@ -73,7 +73,7 @@ int Evaluation(char *postfix)
 		else
 		{
 			x2 = pop();						//x2 should be popped out first in order to maintain the expression	//first one to get out becomes the second operand for the operation
-			x1 = pop();						//x1 should be popped after x1										//last one to get out becomes the first operand for the operation
+			x1 = pop();						//x1 should be popped after x2										//last one to get out becomes the first operand for the operation
 			
 			switch(postfix[i])				//switch procedure to perform the required arithmetic operations on both the popped out operands
 			{
