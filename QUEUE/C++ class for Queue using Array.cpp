@@ -46,7 +46,7 @@ int Queue::dequeue()
 	else
 	{
 		front++;
-		x = Q[front+1];
+		x = Q[front];
 	}
 	return x;
 }
