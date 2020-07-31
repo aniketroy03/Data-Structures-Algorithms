@@ -7,7 +7,6 @@ class Stack
 		int top;
 		int size;
 		int *Q;
-		void create(int size);
 		bool isEmpty();
 		bool isFull();
 		void push(int x);
